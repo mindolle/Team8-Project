@@ -10,4 +10,12 @@ handleSearch.addEventListener("submit", (event) => {
     console.log(event);
 });
 
-/* 검색 버튼 클릭시 호출되는 함수. */
+let sendData = document.getElementsByClassName("card");
+console.log(sendData);
+for(let i = 0; i < sendData.length; i++) {
+    sendData[i].addEventListener("click", () => {
+        localStorage.setItem("movieId", JSON.stringify(sendData[i].id));
+        location.href='review.html';
+    });
+}
+

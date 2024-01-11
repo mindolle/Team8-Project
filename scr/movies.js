@@ -19,7 +19,7 @@ export const getData = async () => {
             const card =
             `<div class="card" id="${data.results[i].id}">
                 <img src="${imageUrl}${data.results[i].poster_path}" class="image"
-                    alt="${data.results[i].title}" onclick="alert('영화 ID : ${data.results[i].id}')" >
+                    alt="${data.results[i].id}">
                 <div class="text">
                     <h3 class="Movie-title">${data.results[i].title}</h3>
                     <p>${data.results[i].overview}</p>
