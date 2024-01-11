@@ -6,7 +6,7 @@
 }
 
 .reviewArea {
-    /* overflow: auto; */
+    overflow: auto;
     display: flex;
     flex-direction: row;
     width: 65%;
@@ -20,7 +20,27 @@
     flex: 1 0 auto;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.701);
-    
+
+}
+
+.reAreaChild {
+    background-color: whitesmoke;
+    height: 600px; 
+
+    border: 3px solid black;
+    border-radius: 5px;
+
+    margin: 30px 30px 30px 30px
+}
+
+.reAreaChild ul {
+    background-color: blue; 
+    margin: 50px 0px 0px 0px;
+}
+
+.reAreaChild ul li {
+    font-size: 17px;
+    list-style: none;
 }
 
 .reArea>p {
