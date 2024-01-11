@@ -7,7 +7,8 @@ const options = {
 };
 
 const imageUrl = "https://image.tmdb.org/t/p/w500";
-
+const url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=01b86e69dccd1095a91c09b4eeb0386d&targetDt=20120101"
+console.log(url);
 
 export const getData = async () => {
     try {
