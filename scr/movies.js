@@ -7,14 +7,11 @@ const options = {
 };
 
 const imageUrl = "https://image.tmdb.org/t/p/w500";
-const url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=01b86e69dccd1095a91c09b4eeb0386d&targetDt=20120101"
-console.log(url);
 
 export const getData = async () => {
     try {
         const res = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options);
         const data = await res.json();
-        console.log(data);
 
         for (let i = 0; i < data.results.length; i++) {
             const card =
@@ -23,7 +20,7 @@ export const getData = async () => {
                     alt="${data.results[i].id}">
                 <div class="text">
                     <h3 class="Movie-title">${data.results[i].title}</h3>
-                    <p>${data.results[i].overview}</p>
+                    <p>${data.results[i].overview}</p></br>
                     <strong>평점: ${data.results[i].vote_average}</strong>
                 </div>
             </div>`
