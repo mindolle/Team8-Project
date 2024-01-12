@@ -1,12 +1,26 @@
-.super {
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    background-color: rgb(178, 178, 178);
     width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: large;
+    padding-top: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.super {
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
-.reviewArea {
-    overflow: auto;
+.details {
     display: flex;
     flex-direction: row;
     width: 65%;
@@ -14,34 +28,33 @@
     background-color: rgb(217, 217, 217);
 }
 
-.reArea {
+.movieDetail {
+    background-color: rgb(217, 217, 217);
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.movieDetail>a {
+    width: 50%;
+    height: 70%;
+    background-color: red;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+/* .reArea {
     position: sticky;
     top: 0;
     flex: 1 0 auto;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.701);
+} */
 
-}
-
-.reAreaChild {
-    background-color: whitesmoke;
-    height: 600px; 
-
-    border: 3px solid black;
-    border-radius: 5px;
-    box-shadow: 1px 1px 0px 0px gray;
-
-    margin: 30px 30px 30px 30px
-}
-
-.reAreaChild ul {
-    margin: 50px 0px 0px 0px;
-}
-
-.reAreaChild ul li {
-    font-size: 17px;
-    list-style: none;
-}
 
 .reArea>p {
     font-size: 40px;
@@ -53,12 +66,17 @@
 .inputReview {
     position: relative;
     background-color: #e0e5ec;
-    height: 100%;
+    height: auto;
     width: 35%;
 }
 
+.reviewArea {
+    height: 70%;
+}
+
 .textForm {
-    height: 40%;
+    height: 30%;
+    margin-bottom: 100px;
 }
 
 .textForm>form {
@@ -66,7 +84,7 @@
     /* align-items: center; */
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
 }
 
 .textForm>form>input {
@@ -79,17 +97,17 @@
 }
 
 .poster {
-    height: 60%;
+    height: 70%;
     border-radius: 10px;
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: 15%;
 }
 
 .poster>img {
-    width: 80%;
-    height: 80%;
-    margin-top: 20px;
+    width: 90%;
+    height: 90%;
     box-shadow:
         -7px -7px 20px 0px #fff9,
         -4px -4px 5px 0px #fff9,
