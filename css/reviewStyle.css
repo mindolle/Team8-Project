@@ -74,6 +74,10 @@
     height: 70%;
 }
 
+ul {
+    list-style: none;
+}
+
 .textForm {
     height: 30%;
     margin-bottom: 100px;
