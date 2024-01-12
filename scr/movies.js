@@ -7,8 +7,8 @@ const options = {
 };
 
 const imageUrl = "https://image.tmdb.org/t/p/w500";
-const url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=01b86e69dccd1095a91c09b4eeb0386d&targetDt=20120101"
-console.log(url);
+// const url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=01b86e69dccd1095a91c09b4eeb0386d&targetDt=20120101"
+// console.log(url);
 
 export const getData = async () => {
     try {
@@ -18,7 +18,7 @@ export const getData = async () => {
 
         for (let i = 0; i < data.results.length; i++) {
             const card =
-            `<div class="card" id="${data.results[i].id}">
+                `<div class="card" id="${data.results[i].id}">
                 <img src="${imageUrl}${data.results[i].poster_path}" class="image"
                     alt="${data.results[i].title}" onclick="alert('영화 ID : ${data.results[i].id}')" >
                 <div class="text">
