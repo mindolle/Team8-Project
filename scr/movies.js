@@ -20,8 +20,8 @@ export const getData = async () => {
                     alt="${data.results[i].id}">
                 <div class="text">
                     <h3 class="Movie-title">${data.results[i].title}</h3>
-                    <p>${data.results[i].overview}</p></br>
-                    <strong>평점: ${data.results[i].vote_average}</strong>
+                    <p style="display: none;">${data.results[i].overview}</p></br>
+                    <strong style="display: none;">평점: ${data.results[i].vote_average}</strong>
                 </div>
             </div>`
 
