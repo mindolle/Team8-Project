@@ -74,6 +74,16 @@
     height: 70%;
 }
 
+.review-ul {
+    background-color: white;
+    height: 500px;
+    margin: 20px 10px 0px 10px;
+
+    border: 2px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
 ul {
     list-style: none;
 }
