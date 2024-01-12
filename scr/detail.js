@@ -1,4 +1,5 @@
 const movieId = JSON.parse(localStorage.getItem("movieId"));
+
 console.log(movieId);
 console.log(movieId.title);
 console.log(movieId.img);
@@ -7,9 +8,6 @@ console.log(movieId.img);
 const reviewPoster = document.getElementById("pt");
 const reviewTitle = document.getElementById("tt");
 const reviewOverview = document.querySelector('.movieDetail');
-
-//저장되어 있는 영화 정보 가져옴
-const movieId = JSON.parse(localStorage.getItem("movieId"));
 
 //저장된 정보 리뷰 창에 반영함
 reviewPoster.src = movieId.img;
@@ -33,7 +31,7 @@ function showReview() {
 }
 
 //form 태그 내에서 입력한 내용 제출하면 showReview함수 실행
-const formReview = document.querySelector("#form");
+const formReview = document.querySelector(".reviewForm");
 formReview.addEventListener('submit', function (event) {
     event.preventDefault();
     showReview();
