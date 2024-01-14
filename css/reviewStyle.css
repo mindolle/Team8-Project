@@ -35,8 +35,11 @@ body {
 
 .movieDetail {
     background-color: rgb(217, 217, 217);
-    width: 60%;
+    text-align: center;
+    width: 50%;
     height: 100%;
+    padding: 25px;
+    
     position: relative;
 }
 
