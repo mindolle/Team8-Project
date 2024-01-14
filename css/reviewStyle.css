@@ -76,6 +76,7 @@ body {
 }
 
 .reviewArea {
+    list-style: none;
     height: 70%;
 }
 
@@ -165,9 +166,9 @@ ul {
         -4px -4px 5px 0px #fff9,
         7px 7px 20px 0px #0002,
         4px 4px 5px 0px #0001;
+    margin-right: 10px;
 }
 
-/*추가한 뒤로가기 버튼 */
 #exit {
     position: absolute; 
     top: 55px;
@@ -176,11 +177,4 @@ ul {
     height: 70px;
     box-shadow: 0 0 0 5px rgb(178, 178, 178);
     border-radius: 10px;
-}
-
-
-.reviewArea {
-    list-style: none;
-
-    margin-right: 10px;
 }
