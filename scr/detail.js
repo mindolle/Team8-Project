@@ -15,8 +15,9 @@ export const resultData = (sendData) => {
         title: sendData.querySelector('.text').childNodes[1].innerHTML,
         summary: sendData.querySelector('.text').childNodes[3].innerHTML,
     }
-    localStorage.setItem("movie", JSON.stringify(data));
     localStorage.setItem(`movie${sendData.id}`, JSON.stringify(data));
     
     location.href = 'review.html';
 }
+
+
