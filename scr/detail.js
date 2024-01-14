@@ -12,7 +12,7 @@ const reviewOverview = document.querySelector('.movieDetail');
 //저장된 정보 리뷰 창에 반영함
 reviewPoster.src = movieId.img;
 reviewTitle.textContent = movieId.title;
-reviewOverview.textContent = movieId.summary;
+reviewOverview.textContent = '줄거리: ' + movieId.summary;
 
 
 // 사용자 이름, 비밀번호, 리뷰 내용 보여주는 함수

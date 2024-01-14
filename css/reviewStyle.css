@@ -35,15 +35,18 @@ body {
 
 .movieDetail {
     background-color: rgb(217, 217, 217);
+    /* background-color: blue; */
     text-align: center;
-    width: 50%;
-    height: 100%;
+    width: 30%;
+    height: 60%;
+    margin-top: 150px;
+    margin-bottom: auto;
     padding: 25px;
     
-    position: relative;
+    position: absolute;
 }
 
-.movieDetail>a {
+.movieDetail>p {
     width: 50%;
     height: 70%;
     background-color: red;
