@@ -34,8 +34,8 @@ body {
 }
 
 .movieDetail {
-    background-color: rgb(217, 217, 217);
-    /* background-color: blue; */
+    /* background-color: rgb(217, 217, 217); */
+    background-color: blue;
     text-align: center;
     width: 30%;
     height: 60%;
@@ -43,7 +43,7 @@ body {
     margin-bottom: auto;
     padding: 25px;
     
-    position: absolute;
+    position: relative;
 }
 
 .movieDetail>p {
