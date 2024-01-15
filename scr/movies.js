@@ -8,6 +8,7 @@ const options = {
 
 const imageUrl = "https://image.tmdb.org/t/p/w500";
 
+// 영화 api를 불러와 카드형태로 웹페이지에 추가한다.
 export const getData = async () => {
     try {
         const res = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options);

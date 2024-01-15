@@ -20,7 +20,7 @@ setTimeout(() => {
             resultData(sendData[i]);
         });
     }
-}, 50);
+}, 100);
 
 
 
