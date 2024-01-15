@@ -1,38 +1,16 @@
-const movieId = JSON.parse(localStorage.getItem("movieId"));
-
-console.log(movieId);
-console.log(movieId.title);
-console.log(movieId.img);
-
-//review 창에서 영화 포스터, 제목, 개요 저장할 공간 가져옴
-const reviewPoster = document.getElementById("pt");
-const reviewTitle = document.getElementById("tt");
-const reviewOverview = document.querySelector('.movieDetail');
-
-//저장된 정보 리뷰 창에 반영함
-reviewPoster.src = movieId.img;
-reviewTitle.textContent = movieId.title;
-reviewOverview.textContent = movieId.summary;
-
-
-// 사용자 이름, 비밀번호, 리뷰 내용 보여주는 함수
-function showReview() { 
-    const reviewArea = document.querySelector(".reviewArea");
-    //let reviewer = {};
-    const review = document.getElementById("review-input").value;
-    const user = document.getElementById("user-input").value;
-    const pw = document.getElementById("password-input").value;
-    // reviewer.user = user;
-    // reviewer.pw = pw;
-    // reviewer.review = review;
-    reviewArea.innerHTML = `<li>이름 : ${user}</li>
-    <li>비밀번호 : ${pw}</li>
-    <li>리뷰 : ${review}</li>`;
+// 카드를 클릭하면 해당 영화의 정보를 localStorage에 저장하고 페이지 이동.
+// 카드를 클릭할 때 마다 movie라는 key값의 Value는 계속 변경된다.
+// 이를 가지고 영화 상세정보 및 영화별 리뷰 구분을 한다.
+export const resultData = (sendData) => {
+    let data = {
+        id: sendData.id,
+        img: sendData.querySelector('.image').src,
+        rating: sendData.querySelector('.text').childNodes[6].innerHTML,
+        title: sendData.querySelector('.text').childNodes[1].innerHTML,
+        summary: sendData.querySelector('.text').childNodes[3].innerHTML,
+    }
+    localStorage.setItem("movie", JSON.stringify(data));
+    // localStorage.setItem(`movie${sendData.id}`, JSON.stringify(data));
+    
+    location.href = 'review.html';
 }
-
-//form 태그 내에서 입력한 내용 제출하면 showReview함수 실행
-const formReview = document.querySelector(".reviewForm");
-formReview.addEventListener('submit', function (event) {
-    event.preventDefault();
-    showReview();
-})
